@@ -30,20 +30,30 @@ p{
 .subheading {
     color: #575757;
     font-weight: 900;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 	text-transform: uppercase;
 }
+
+.fine-print {
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+	color: #858585;
+ }
 
 /* Intro */
 
 .intro {
+	background-color: #9480e4;
+	background-image: url(./images/intro-bg.png);
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
     color: #fff;
-    background-color: #9480e4;
-	min-height: 30px;
+	min-height: 250px;
 	justify-content: center;
 	text-align: center;
+	padding-left: 2em;
+	padding-right: 2em;
 }
 
 /* Main content */
@@ -62,4 +72,52 @@ p{
 
 /* Form */
 
+input {
+	font-family: inherit;
+	width: 100%;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	border: 2px solid #d1d5db;
+	border-radius: 5px;
+}
+
+input:focus {
+	background-color: #e6e8ec;
+	outline: none;
+	border-color: #8a71ec;
+}
+
 /* Media queries */
+
+@media (min-width: 768px)
+{
+	body {
+		display: flex;
+	}
+
+	.intro,
+	.main-content {
+		width: 50%;
+	}
+
+	.intro {
+		min-height: 100vh;
+	}
+
+	.main-content {
+		justify-content: center;
+		padding-top: 0;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.625rem;
+	}
+
+	.beta-text {
+		font-size: 1.25rem;
+	}
+}
